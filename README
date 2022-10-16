@@ -1,0 +1,22 @@
+- To upload files, follow following steps:
+    - Create Object Type via API Object Type Manager:
+      https://{{relativityPath}}/Relativity.REST/API/relativity-object-model/v1/workspaces/{{workspaceID}}/object-types/
+    - Create Field File reference to Object type created already via API Field Manager
+      https://{{relativityPath}}/relativity.rest/api/relativity-object-model/v1/workspaces/{{workspaceID}}/fields/file
+    - Upload file via API File Field Manager:
+      https://{{relativityPath}}/relativity.rest/api/relativity-object-model/v1/workspaces/{{workspaceID}}/files/upload
+      
+      Body form-data:
+        - file (type file): upload file
+        - "" (type application json): {fileRequest: {"field":{"ArtifactID":1042787},"objectRef":{"ArtifactID":1042787},"fileName":"abc.txt"}}
+      
+
+
+NOTE: Query resource https://platform.relativity.com/10.3/Content/REST_API/Resource_Tasks/Querying_for_resources.htm
+
+
+
+INSTTRUCTION OF INSTALL AS EXE FILE FOR WINDOW
+- Install python 3.6
+- Install package pyinstaller: pip3 install pyinstaller
+- Build exe file: pyinstaller --onefile --paths [FULL_PATH_TO]/venv/lib/python3.6/site-packages/ main.py 
