@@ -18,5 +18,7 @@ NOTE: Query resource https://platform.relativity.com/10.3/Content/REST_API/Resou
 
 INSTTRUCTION OF INSTALL AS EXE FILE FOR WINDOW
 - Install python 3.6
+- Install virtualenv pip3 install virtualenv
 - Install package pyinstaller: pip3 install pyinstaller
+- Create virtualenv: virtualenv venv
 - Build exe file: pyinstaller --onefile --paths [FULL_PATH_TO]/venv/lib/python3.6/site-packages/ main.py 
